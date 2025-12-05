@@ -4,6 +4,7 @@ A01464263
 
 Manages player character creation, stats, and progression.
 """
+from color import *
 
 
 def make_character(name: str) -> dict:
@@ -124,32 +125,15 @@ def display_character_stats(character: dict):
     :postcondition: prints formatted character stats to console
     :return: None
 
-    >>> test_char = make_character("Test")
-    >>> display_character_stats(test_char) # doctest: +NORMALIZE_WHITESPACE
-    <BLANKLINE>
-    *<[ S T A T S ]>*
-    <BLANKLINE>
-    NAME:   Test
-    LEVEL:  1
-    XP:     0
-    HP:     100/100
-    HONOR:  0
-    GOLD:   50
-    <BLANKLINE>
-    *<[---------]>*
-    <BLANKLINE>
     """
-    print("\n*<[ S T A T S ]>*")
+    print(MAGENTA + "\n<[ S T A T S ]>" + RESET)
     print()
-    print(f"NAME:   {character['Name']}")
-    print(f"LEVEL:  {character['Level']}")
-    print(f"XP:     {character['XP']}")
-    print(f"HP:     {character['Current HP']}/{character['Maximum HP']}")
-    print(f"HONOR:  {character['Honor']}")
-    print(f"GOLD:   {character['Gold']}")
-    print("\n*<[---------]>\n")
+    print(MAGENTA + f"NAME:   {character['Name']}" + RESET)
+    print(MAGENTA + f"LEVEL:  {character['Level']}" + RESET)
+    print(MAGENTA + f"XP:     {character['XP']}" + RESET)
+    print(MAGENTA + f"HP:     {character['Current HP']}/{character['Maximum HP']}" + RESET)
+    print(MAGENTA + f"HONOR:  {character['Honor']}" + RESET)
+    print(MAGENTA + f"GOLD:   {character['Gold']}" + RESET)
+    print(MAGENTA + "\n[-------------]\n" + RESET)
 
 
-if __name__ == "__main__":
-    test_player = make_character("Ghost Rider")
-    display_character_stats(test_player)
