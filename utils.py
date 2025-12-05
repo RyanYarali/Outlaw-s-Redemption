@@ -4,7 +4,7 @@ A01464263
 
 Provides input validation and character movement.
 """
-
+from color import *
 
 def validate_move(board: dict, character: dict, direction: str) -> bool:
     """
@@ -80,10 +80,9 @@ def get_user_choice() -> str:
     :precondition: none
     :postcondition: prompts user for input and returns uppercase string
     :return: user's choice as uppercase string
-
     """
-    prompt_arrow = "\n>>> "
-    choice = input(f"Your move, stranger? [N, S, E, W, M(ap), I(nfo), Q(uit)]{prompt_arrow}").strip().upper()
+    prompt = f"\n{CYAN}Your move?  [N/S/E/W = Move, M = Map, I = Info, $ = Shop, Q = Quit]{RESET}\n>>> "
+    choice = input(prompt).strip().upper()
     return choice
 
 
