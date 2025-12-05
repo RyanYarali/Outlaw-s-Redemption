@@ -5,7 +5,7 @@ A01464263
 Handles enemy generation, damage calculation and combat mechanics.
 """
 import random
-
+from color import *
 
 def generate_enemy(player_level: int) -> dict:
     """
@@ -52,8 +52,8 @@ def execute_combat_encounter(character: dict) -> tuple:
     enemy = generate_enemy(player_level)
     xp_reward = 20 + (player_level * 5)
 
-    print("\n*<[ C O M B A T ]>*")
-    print(f"\nA wild {enemy['Name']} appears!")
+    print(RED + "\n[ C O M B A T ]" + RESET)
+    print(RED + f"\nA wild {enemy['Name']} appears!" + RESET)
 
     while character["Current HP"] > 0 and enemy["HP"] > 0:
         print(f"\nYour HP: {character['Current HP']} | Enemy HP: {enemy['HP']}")
@@ -64,9 +64,9 @@ def execute_combat_encounter(character: dict) -> tuple:
         print(f"You attack, dealing {player_damage} damage!")
 
         if enemy["HP"] <= 0:
-            print(f"You defeated the {enemy['Name']}!")
+            print(GREEN + f"You defeated the {enemy['Name']}!" + RESET)
             character["Gold"] += enemy["Gold"]
-            print(f"You loot {enemy['Gold']} gold and gain {xp_reward} XP.")
+            print(GREEN + f"You loot {enemy['Gold']} gold and gain {xp_reward} XP." + RESET)
             return True, xp_reward
 
         enemy_damage = random.randint(enemy["Damage"] - 5, enemy["Damage"] + 5)
@@ -74,7 +74,7 @@ def execute_combat_encounter(character: dict) -> tuple:
         print(f"The {enemy['Name']} retaliates, dealing {enemy_damage} damage to you!")
 
         if character["Current HP"] <= 0:
-            print("You have been defeated...")
+            print(RED + "You have been defeated..." + RESET)
             return False, 0
 
     return False, 0
