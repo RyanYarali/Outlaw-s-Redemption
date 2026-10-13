@@ -1,6 +1,5 @@
 """
 Ryan Yarali
-A01464263
 
 Cheat code system.
 """

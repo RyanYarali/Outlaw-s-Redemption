@@ -1,6 +1,5 @@
 """
 Ryan Yarali
-A01464263
 
 Manages random encounters including honor choices, combat, and puzzles.
 """

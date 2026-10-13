@@ -1,6 +1,5 @@
 """
 Ryan Yarali
-A01464263
 
 ANSI color codes for terminal text formatting.
 """

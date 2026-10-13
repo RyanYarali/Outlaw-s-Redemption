@@ -1,6 +1,5 @@
 """
 Ryan Yarali
-A01464263
 
 Handles enemy generation, damage calculation and combat mechanics.
 """

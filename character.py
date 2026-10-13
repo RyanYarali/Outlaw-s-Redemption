@@ -1,6 +1,5 @@
 """
 Ryan Yarali
-A01464263
 
 Manages player character creation, stats, and progression.
 """

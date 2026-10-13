@@ -1,6 +1,5 @@
 """
 Ryan Yarali
-A01464263
 
 Contains the main game loop and game flow logic.
 """

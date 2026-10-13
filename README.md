@@ -4,7 +4,7 @@
 
 A terminal-based Western RPG where your choices matter. Built with Python, powered by ANSI colors, and driven by revenge. 
 
-**By Ryan Yarali** | Student ID: A01464263 | [@RyanYarali](https://github.com/RyanYarali)
+**By Ryan Yarali** | [@RyanYarali](https://github.com/RyanYarali)
 
 ---
 
@@ -456,8 +456,7 @@ This project is for educational purposes only.  Not licensed for commercial use.
 ## 📞 CONTACT
 
 **Ryan Yarali**  
-Student ID: A01464263  
-GitHub: [@RyanYarali](https://github. com/RyanYarali)  
+GitHub: [@RyanYarali](https://github.com/RyanYarali)  
 Course: COMP 1510 - 202530  
 Institution: BCIT
 

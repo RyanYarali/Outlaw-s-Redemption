@@ -1,6 +1,5 @@
 """
 Ryan Yarali
-A01464263
 
 Starts the Outlaw's Redemption game.
 """
